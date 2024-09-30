@@ -10,10 +10,10 @@ int main()
     B=B*B;
     if(A==B)
     {
-        printf("il primo valore %f è il quadrato del secondo %f",A,B);
+        printf("il primo valore %.2f è il quadrato del secondo %.2f\n",A,B);
     }
     else
     {
-        printf("il primo valore %f non è il quadrato del secondo %f",A,B);
+        printf("il primo valore %.2f non è il quadrato del secondo %.2f\n",A,B);
     }
 }
