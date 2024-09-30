@@ -7,10 +7,9 @@ int main()
     scanf("%f",&A);
     printf("inserisci il secondo valore: ");
     scanf("%f",&B);
-    B=B^2;
+    B=B*B;
     if(A=B)
     printf("A è il quadrato di B: ");
     else
     printf("A non è il quadrato di B: ");
-    return 0;
 }
