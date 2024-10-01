@@ -13,5 +13,6 @@ int main ()
     if(a==b==c)
     {printf("i tre numeri sono uguali");}
     else
-    {}
+    if (a<b&c)
+    printf("il numero più piccolo è: %f",a);
 }
