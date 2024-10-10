@@ -1,14 +1,17 @@
-/*Scrivi un programma che riceva in ingresso un numero minore di 10.000 
-e dica da quante cifre è formato, quindi separi le migliaia dalle centinaia dalle 
-decine e dalle unità visualizzandole separatamente sullo schermo*/
+/*
+Verificare se un numero dato in input è divisibile sia per 3 sia per 5
+*/
 #include <stdio.h>
+
 int main ()
-{
-    int n1=0, migliaia=0, centinaia=0, decine=0, unita=0;
-    printf("inserisci un numero minero di 10000");
-    scanf("%d",&n1);
-    migliaia=n1/1000;
-    centinaia=n1/100;
-    decine=n1/10;
-    unita=n1/1
+{	int a=0;
+    printf("inserisci il valore: ");
+    scanf("%d",&a);
+    if(a%3==0)
+        if(a%5==0)
+            printf("il valore è divisibile sia per 3 sia per 5");
+        else
+            printf("il valore non è divisibile per 3 ma non per 5");
+    else
+        printf("il valore non è divisibile per 3");
 }
