@@ -10,7 +10,7 @@ int main(){
     somma2=l2+l3;
     somma3=l3+l1;
 
-    if(somma1>l3 || somma2>l1 || somma3>l2)
+    if(somma1>l3 && somma2>l1 && somma3>l2)
         printf("possono essere le lunghezze dei lati di un triangolo");
     else
         printf("non possono essere le lunghezze dei lati di un triangolo");
