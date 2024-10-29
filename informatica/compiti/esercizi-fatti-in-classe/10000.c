@@ -8,10 +8,10 @@ int main(){
     printf("Inserire un numero inferiore a 10000: ");
     scanf("%d", &numero);
 
-    if(numero<1 || numero>=10000){
+    if(numero<1 || numero>=10000)
         printf("Il numero inserito non è valido.\n");
-    }
-    else { //siamo sicura che il numero è compreso tra 1 e 9999
+    
+    else { //siamo sicuri  che il numero è compreso tra 1 e 9999
         if(numero<10){
             printf("Il numero ha una cifra\n");
             quoziente = numero / 10;
