@@ -3,7 +3,7 @@
 #include <time.h>
 
 int main(){
-    srand(time(NULL));
+    srand(time(NULL)); //inizia a generare numeri casuali
 
     int random_max=31;
     int random_min=1;

@@ -14,6 +14,6 @@
     else{
         printf("inserisci un altro numero");
         scanf("%d",&num);
-        somma=somma+num
+        somma=somma+num;
     }
  }
