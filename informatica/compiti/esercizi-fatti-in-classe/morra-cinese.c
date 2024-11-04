@@ -12,7 +12,7 @@ int main(){
     int sceltautente, sceltacomputer;
 
     sceltacomputer=rand()%3+1; //%3 (perchè 3 è il numero di scelte)/ +1 (perche la scelta sarebbe 0-1-2-3 ma noi vogliamo il raggio 1-2-3 quindi aggiungiamo 1)
-    printf("scegli tra sasso=1, carta=2, forbice=3");
+    printf("scegli tra sasso=1, carta=2, forbice=3: ");
     scanf("%d",&sceltautente);
 
     if(sceltautente==1 || sceltautente==2 || sceltautente==3){
@@ -27,5 +27,5 @@ int main(){
         else
             printf("ha vinto il pc");
     }else
-        pritnf("errore");
+        printf("errore");
 }
