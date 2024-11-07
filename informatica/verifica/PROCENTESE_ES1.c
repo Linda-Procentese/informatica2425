@@ -7,7 +7,7 @@ ES: 3 è composto da 1 cifra e supponendo k=5 allora k compare 0 volte, 56 è co
 da 2 cifre e k compare 1 volta*/
 #include <stdio.h>
 int main(){
-    int n, k, q, r, contatore;
+    int n, k, q, r, contatore=0;
     printf("inserisci un numero: ");
     scanf("%d",&n);
     printf("inserisci un valore k: ");
