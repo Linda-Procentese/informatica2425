@@ -29,7 +29,7 @@ int main() {
         
     }
     else
-        ("errore");}
+        printf("errore");}
     else
         printf("il numero non è una potenza di 2");
     }
