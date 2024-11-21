@@ -27,7 +27,8 @@ int main(){
 		somma+=numero;
 		cnt++;
 	}
-	else {if(flag!=1){
+	
+else {if(flag!=1){
 			media=somma/cnt;
 			printf("\nHai inserito %d valori e la media vale %.2f ", cnt, media);
 			}
