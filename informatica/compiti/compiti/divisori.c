@@ -2,16 +2,15 @@
 Dato un numero stampare tutti i suoi divisori*/
 #include <stdio.h>
 int main(){
-    int num, q, r;
+    int num, divisore=2;
     printf("inserisci un numero: ");
     scanf("%d",&num);
-    q=num/3;
-    r=num%3;
-    printf("il divisore di tre è: %d",q);
-    while(q!=0 || r==0){
-        r=q%3;
-        q=q/3;
-        printf("\nil divisore di tre è: %d",q);
+    
+    while(divisore<=num/2){
+        if(num%divisore==0)
+            printf("%d è un divisore di %d\t",divisore,num);
+        
+        divisore++;
         }
-    printf("\nfine");
+    printf("1\t%d",num);
 }
