@@ -57,6 +57,7 @@
             if((cifra1+cifra2+cifra3)%3==0)
                 printf("è divisibile per 3");
         }
+        
 
 
    }
