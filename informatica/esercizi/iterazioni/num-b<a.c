@@ -3,14 +3,14 @@ scriva quante volte a è divisibile per b
 es: a=162 e b=3 a è divisibile 4 volte per b*/
 #include <stdio.h>
 int main (){
-    int n1,n2,cnt=0,divisione=0;
+    int a,b,cnt=0,divisione=0;
     printf("ins due numeri: ");
-    scanf("%d%d",&n1,&n2);
-    if(n2<n1){
-        while(n1%n2==0){
-            divisione=n1/n2;
+    scanf("%d%d",&a,&b);
+    if(b<a){
+        while(a%b==0){
+            divisione=a/b;
             cnt++;
-            printf("%d/%d=%d",n1,n2,divisione);
+            printf("%d/%d=%d",a,b,divisione);
     }}
     else
         printf("errore");
