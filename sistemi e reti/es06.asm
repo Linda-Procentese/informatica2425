@@ -18,6 +18,7 @@ MAIN:
 		dec bx			;IMPORTANTE:modificare il registro (variabile) su cui si basa il ciclo, altrimenti possibile loop
 		jmp ciclo		;salto alla testa del ciclo per un nuovo controllo
 	
+	fine:
 	mov ah, 4ch
 	int 21h
 	.exit

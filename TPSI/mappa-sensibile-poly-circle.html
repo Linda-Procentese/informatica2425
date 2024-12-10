@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head><title>compito per l'11/12/2024, sulla mappa sensibile con circle e poly</title></head>
+    <body>
+        <img src="images.jpg" alt="vedrai un'immagine con delle foto" usemap="#workmap"> <!--immagine sensibile (se sposto il cursore su un monumeto mi fa visualizzare un link)-->
+        <map name="workmap"> <!--il nome workmap deve essere dato anche all'immagine sensibile-->
+            <!--bisogna aprire l'immagine con paint dove in basso a sinistra si vedono le coordinate del postoincui è il cursore-->
+            <area shape="circle" coords="59,49,50" alt="foto di una ragazza" href="https://www.istagram.it">
+            <!--prima e seconda coordinata:due coordinate del centro del cerchio, terza coordinata: raggio del cerchio-->
+            <area shape="circle" coords="57,140,43" alt="foto di un' altra ragazza" href="https://www.istagram.it">
+        </map>
+        <img src="poligoni.jpg" alt="vedrai un'immagine con delle foto" usemap="#mappapoligoni">
+        <map name="mappapoligoni">
+            <area shape="poly" coords="43,57,37,45,30,65,27,48,14,40,29,40,39,30,55,44" alt="poligono 1" href="https://www.google.it"><!--bisogna scrivere uno dietro l'altro tutti i punti(foramti da due numeri) di ogni vertice della figura-->
+            <area shape="poly" coords="85,52,86,42,78,33,91,31,97,20,101,31,113,34,106,42,106,54,95,48" alt="poligono 2" href="https://www.google.it">
+        </map>
+    </body>
+</html>
