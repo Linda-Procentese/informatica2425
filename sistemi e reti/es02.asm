@@ -18,7 +18,7 @@ MAIN:
 	 
 	add bx, ax  ;add addizione matematica -->bx [000c]
 	
-	;chiusuracodice
+	;chiusura codice
 	mov ah, 4ch
 	int 21h
 	.exit
