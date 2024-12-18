@@ -28,7 +28,7 @@ MAIN:
 	jmp fine
 	
 		ciclo:
-		cmp cx, 24h ;24=somma di tuttii numeri naturali da 1 a bx=8)
+		cmp cx, 24h ;24=somma di tuttii numeri naturali da 1 a (bx=8)
 		jg fine
 		add cx, ds
 		inc ds
