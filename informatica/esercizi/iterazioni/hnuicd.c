@@ -13,8 +13,16 @@ int main(){
     scanf("%d",&n);
 
     while(n>x){
-        
+
         cnt++;
-        printf("%d numeri sono maggiori di %d",cnt,x);
+        printf("\n%d numeri sono maggiori di %d",cnt,x);
         }
+    while(n<x){
+        cnt++;
+        printf("\n%d numeri sono minori di %d",cnt,x);
+    }
+    while(n==x){
+        cnt++;
+        printf("\n%d numeri sono uguali a %d",cnt,x);
+    }
 }

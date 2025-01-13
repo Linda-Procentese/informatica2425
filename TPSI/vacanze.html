@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Compito di Natale</title>
+		<style>
+			body {  
+				background: #e89900; 
+				color: #888; 				
+				font-family: 'Open Sans', sans-serif; 
+				}
+			h1 {
+				color:white;
+				}
+			p {
+				font-size: 18px;
+			}
+			#elenco{
+				color: white;
+				font-size: 22px;
+			}
+			ol,ul{
+				font-size: 22px;
+				color: black;
+			}
+			div{
+				width: 400px;
+				height: 300px;
+				border-style: 2px solid white;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Mettiamoci alla prova</h1> 
+		<p><marquee>creiamo un testo scorrevole, di grandezza 18px, colore #888</marquee></p>
+		Diamo delle righe di spazio<br><br>
+		<font id="elenco">
+			<center>Creiamo degli elenchi</center>
+		</font>
+			<ol type="a">
+				<li>questo è 
+				<li>un elenco ordinato
+				<li>con type="a"
+			</ol>
+			<ol type="I">
+				<li>questo è 
+				<li>un elenco ordinato
+				<li>con type="I"
+			</ol>
+			<ul type="square">
+				<li>questo è un elenco
+				<li>con puntatore
+				<li>type="square"
+			</ul>
+			<ul type="circle">
+				<li>questo è un elenco
+				<li>con puntatore
+				<li>type="circle"
+			</ul>
+			<a href="https://www.w3schools.com/" target="_blanck">
+			Questo link ci collega al sito di w3scools in una nuova scheda</a>
+			<br><br>
+			<p>
+			In questo testo alcune parti sono <font style="color: red;font-weight: bold;"> evidenziate in rosso grassetto </font><br>
+			mentre altre parti sono <font style="color: blue; font-style: italic;">evidenziate in blu corsivo </font><br>
+			e altre parti sono <font style="color: green; background-color: yellow;">VERDI SU SFONDO GIALLO </font><br>
+		</p>
+		
+			
+			<table style="width:50%; height:300px; border:1px solid red;">
+				<!-- prima riga -->
+				<tr >
+					<td colspan="3" style="border:1px solid red; background-color:yellow;"></td>
+					<!-- <td></td> -->
+					<!-- <td></td> -->
+					<td style="border:1px solid red;"></td>
+				</tr>
+				<!-- seconda riga -->
+				<tr>
+					<td style="border:1px solid red;"></td>
+					<td rowspan="2" style="border:1px solid red;"></td>
+					<td colspan="2" style="border:1px solid red;"></td>
+					<!-- <td></td> -->
+				</tr>
+				<!-- terza riga -->
+				<tr>
+					<td style="border:1px solid red;"></td>
+					<!-- <td></td> -->
+					<td rowspan="2" style="border:1px solid red;"></td>
+					<td rowspan="2" style="border:1px solid red;"></td>
+				</tr>
+				<!-- quarta riga -->
+				<tr>
+					<td style="border:1px solid red;"></td>
+					<td style="border:1px solid red;"></td>
+					<!-- <td></td> -->
+					<!-- <td></td> -->
+				</tr>
+			</table>
+			<br><br>
+			<div id="cont1" style="text-align: right;background-color: lightgreen;width: 400px;margin: 20px;padding: 10px;border-style: dashed; float: right;">
+			<p>
+				Questo paragrafo è largo 400 px,<br>
+				il testo è allineato a destra,<br>
+				ha colore lightgreen,<br>
+				ed ha un margine di 20 px, un padding di 10 px ed<br>
+				un bordo..<br>
+			</p>
+		</div>
+			
+	</body>
+</html>
