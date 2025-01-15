@@ -1,0 +1,100 @@
+<html>
+    <head><title>Verifica html</title>
+        <style>
+            table{
+                border:1px solid black;
+                width: 200px;
+                height: 300px;
+            }
+            p{
+                text-align: right;
+            }
+            h1{
+                text-align: left;
+            }
+            h2{
+                text-align: left;
+                font-style: italic;
+            }
+            h3{
+                text-align: left;
+            }
+            #cont1{
+                align-items: left;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td rowspan="2" style="background-color: green; border:1px solid black;"></td>
+                <td style="border:1px solid black;"></td>
+                <td style="border:1px solid black;"></td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black;"></td>
+                <td style="border:1px solid black;"></td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black;"></td>
+                <td colspan="2" style=" background-color: yellow; border:1px solid black;"></td>
+            </tr>
+        </table>
+            <h1>Alessandro Manzoni</h1>
+            <h3>I Promessi Sposi</h3>
+            <p>
+                “Quel ramo de <font style="font-weight: bold;"> lago di Como</font>, che volge a mezzogiorno,
+
+                <u>tra due catene non interrotte di monti</u>, tutto a seni e a golfi,
+
+                a seconda dello sporgere e del rientrare di quelli, vien,
+
+                quasi a un tratto a ristringersi, e a prender corso e figura di fiume,
+
+                tra un promontorio a destra, e un’ampia costiera dall’altra parte;
+
+                e il ponte, che <mark>ivi congiunge le due rive</mark>, par che renda ancor più
+
+                sensibile all’occhio questa trasformazione, e segni il punto in cui
+
+                il lago cessa, e l’<font style="color: red; font-weight: bold"> Adda</font> ricomincia, per ripigliar poi il nome di lago
+
+                dove le rive, allontanandosi di nuovo, lascian l’acqua distendersi
+
+                e rallentarsi in nuovi golfi e in nuovi seni.”
+            </p>
+
+            <a href="alessandromanzoni.it" target="_blank">Alessandro Manzoni</a>
+
+            <h3>ingredienti di una torta:</h3>
+            <ul type="circle">
+                <li>burro</li>
+                <li>uova</li>
+                <li>farina</li>
+                <li>latte</li>
+                <li>zucchero</li>
+            </ul><br><br>
+
+            <form action="#.php">
+                <label for="name">nome</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Sara"><br>
+                <label for="cname">cognome</label><br>
+                <input type="text" id="cognome" cname="cognome" placeholder="Rossi"><br>
+                <label for="mail">Indirizzo email</label><br>
+                <input type="email" id="mail" name="mail" placeholder="example@gmail.com"><br>
+                <input type="submit" value="Invia"><br>
+                <input type="reset"value="Resetta"><br><br>
+
+                <div id="cont1">
+                    <label style="font-weight: bold;">seleziona le lingue che parli:</label><br>
+                    <input type="checkbox" id="ling1" name="ling1" value="inglese">Inglese<br>
+                    <input type="checkbox" id="ling2" name="ling2" value="francese">Francese<br>
+                    <input type="checkbox" id="ling4" name="ling4" value="spagnolo">Spagnolo<br>
+                </div>
+
+            </form>
+
+
+        
+    </body>
+</html>

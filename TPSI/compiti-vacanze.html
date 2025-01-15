@@ -12,12 +12,21 @@
             }
             h3{
                 color:white;
-                text-align: right;
+                text-align: center;
             }
-            #a{
+            ol,ul{
                 color:black;
                 text-align: left;
                 font-size: 20px;
+            }
+            #b{
+                width: 400px;
+                text-align: right;
+                background-color: lightgreen;
+                margin: 20px;
+                padding: 10px;
+                border-style: dashed;
+                float: right;
             }
         </style>
     <body>
@@ -26,7 +35,7 @@
         Diamo delle righe di spazio<br><br>
         <h3>Creiamo degli elenchi</h3>
 
-        <div id="a">
+        
         <ol type="a">
             <li>questo è
             <li>un elenco ordinato
@@ -51,18 +60,43 @@
             <li>type="circle"</li>
         </ul>
         
-        </div>
+        
 
         <a href="https://www.w3schools.com/" target="_blank">questo link ci collega al sito di w3scools in una nuova pagina</a>
         <br><br>
         <p>in questo testo alcune parti sono <font style="color:red; font-weight: bold;">evidenziate in rosso grassetto</font><br>
         mentre altre parti sono <font style="color:blue; font-style: italic;">evidenziate in blu corsivo</font><br>
         e altre parti sono <font style="color:green; background-color: yellow;">VERDI SU SFONDO GIALLO</font></p><br>
-        <table style="border:1px solid red">
-            <td colspan="3"></td>
-            <td style="border:1px solid red;"></td>
-
+        <table style="border:1px solid red; width: 50% ; height: 300px;">
+            <tr>
+                <td colspan="3" style="background-color: yellow; border:1px solid red"></td>
+                <td style="border:1px solid red"></td>
+            </tr>
+            <tr>
+                <td style="border:1px solid red"></td>
+                <td rowspan="2" style="border:1px solid red"></td>
+                <td colspan="2" style="border:1px solid red"></td>
+            </tr>
+            <tr>
+                <td style="border:1px solid red"></td>
+                <td rowspan="2" style="border:1px solid red"></td>
+                <td rowspan="2" style="border:1px solid red"></td>
+            </tr>
+            <tr>
+                <td style="border:1px solid red"></td>
+                <td style="border:1px solid red"></td>
+            </tr>
 
         </table>
+
+        <div id="b">
+        <p>
+            questo paragrafo è largo 400px,<br>
+            il testo è allineato a destra,<br>
+			ha colore lightgreen,<br>
+			ed ha un margine di 20 px, un padding di 10 px ed<br>
+			un bordo..<br>
+        </p>
+        </div>
     </body>
 </html>
