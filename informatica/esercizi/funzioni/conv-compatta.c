@@ -8,11 +8,11 @@ int main(){
 
     do{
         printf("inserisci un valore: ");
-        scanf("%d",&n);
+        scanf("%ld",&n);
     }while(n<=0);
 
     conv=converti(n);
-    printf("%d",conv);
+    printf("%ld",conv);
 }
 long converti (int _n){
     int q, r, cnt=0, _conv;
