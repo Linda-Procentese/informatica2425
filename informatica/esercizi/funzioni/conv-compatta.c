@@ -8,20 +8,21 @@ int main(){
 
     do{
         printf("inserisci un valore: ");
-        scanf("%ld",&n);
+        scanf("%d",&n);
     }while(n<=0);
 
     conv=converti(n);
     printf("%ld",conv);
 }
 long converti (int _n){
-    int q, r, cnt=0, _conv;
+    int q, r, cnt=0, _conv=0;
     q=_n;
     while(q!=0){
         r=q%2;
         q=q/2;
-    _conv=pow(10,cnt);
-    cnt++;
+        _conv+=r*pow(10,cnt);
+        cnt++;
+        r=0;
 }
 return _conv;
 }
