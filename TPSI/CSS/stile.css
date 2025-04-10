@@ -1,3 +1,9 @@
 body{
-    background: #e89900;
+    background: #67d197;
+    margin: 10px;
+}
+#container{
+    width: 960px;
+    margin: 0px auto;
+    border: 2px red solid;
 }

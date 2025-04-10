@@ -13,14 +13,17 @@ int main(){
         printf("inserisci un numero: ");
         scanf("%d",&n);
     }while(n<=0);
-    triangolo
+    triangolo(n);
     
 }
 void triangolo(int _n){
+    int cnt=0;
     for(int riga=1;riga<=_n ;riga++){
         for(int a=1;a<=riga;a++){
-            printf("%d\t",a);
+            cnt++;
+            printf("%d\t",cnt);
+            
         }
         printf("\n");
     }
-}//non funziona
+}

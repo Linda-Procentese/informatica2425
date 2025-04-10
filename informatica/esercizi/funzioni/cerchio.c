@@ -1,4 +1,4 @@
-/*dato il raggio circolare la circonferena e l'area del cerchio*/
+/*dato il raggio calcolare la circonferena e l'area del cerchio*/
 #include <stdio.h>
 #define PI 3.14
 void circonferenza(float _c, float _r);
