@@ -66,7 +66,7 @@ void bubbleSort(int vett[], int dim);
  * @param int[]vettore1 in ingresso
  * @param int[]vettore2 in ingresso
  */
-void scambioValori(int vett[], int vett[], int dim);
+void scambioValori(int vett1[], int vett2[], int dim);
 
 /**
  * funzione che fa la somma dei componenti di indice pari di un vettore
@@ -81,3 +81,20 @@ void sommaComponentiPari(int vett[], int dim);
  * @param int dim
  */
 void sommaComponentiDispari(int vett[], int dim);
+/**
+ * funzione che ordina un vettore
+ * @param int[]vettore in ingresso
+ * @param int dimensione del vettore
+ */
+
+ void selectionSort(int vett[], int dim);
+
+/**
+ * funzione ricorsiva che ordina un vettore 
+ * @param int[]vettore in ingresso
+ * @param int dimensione totale del vettore (serve per stampare il vettore ad ogni ricorsione)
+ * @param int indice dell'elemento iniziale del vettore da ordinare
+ * @param int indice dell'elemento finale del vettore da ordinare
+ */
+
+ void quickSort(int v[], int dim, int inizio, int fine);
