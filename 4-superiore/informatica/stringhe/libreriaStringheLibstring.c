@@ -114,11 +114,10 @@ int main(){
 
 /*4
 
-*/
 int main(){
-    stringa s=NULL, p;
+    stringa s=NULL;
     char buffer[20], carattere;
-    int len=0;
+    int len=0, cnt=0;
 
     printf("inserisci una stringa: ");
     fgets(buffer,sizeof(buffer),stdin);
@@ -131,7 +130,29 @@ int main(){
     printf("inserisci il carattere che vuoi cercare: ");
     scanf("%c",&carattere);
 
-    p=strchr(s, carattere);
-    printf("la prima occorrenza trovata è: %s",p);
+    for(int i=0;i<len;i++){
+        if(s[i]==carattere){
+            cnt++;
+        }
+    }
+    printf("il carattere viene ripetuto %d volte nella stringa",cnt);
+    free(s);
+}
+*/
+/*5
 
+*/
+
+int main(){
+    stringa s=NULL;
+    char buffer[20], carattere;
+    int len=0;
+
+    printf("inserisci una stringa: ");
+    fgets(buffer,sizeof(buffer),stdin);
+
+    len=strlen(buffer);
+    compatta(buffer,len);
+    s=(stringa)malloc((len+1)*sizeof (char));
+    strcpy(s,buffer);
 }
