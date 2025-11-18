@@ -35,6 +35,7 @@ Sarà necessario verificare la correttezza degli input, quindi nome
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
  typedef char* stringa;
 
@@ -52,24 +53,26 @@ void clear_buffer() {
 
 int main(){
     stringa cognome=NULL, nome=NULL, mese=NULL, codiceFiscale=NULL;
-    int anno, giorno, lenNome=0, lenCogn=0, lenMese=0, lenCodice=16, j;
+    int anno, giorno, lenNome=0, lenCogn=0, lenMese=0, lenCodice=16, cnt=0, j;
     char sesso, buffer[16],c;
     
 
     //cognome
     printf("inserisci il tuo cognome: ");
     fgets(buffer,sizeof(buffer),stdin);
-
-    lenCogn=strlen(buffer);
-    compatta(buffer,lenCogn);
-    cognome=(stringa)malloc((lenCogn+1)*sizeof (char));
-    strcpy(cognome,buffer);
+    
+    //stringa cognome allocata
+    lenNome=strlen(buffer);
+    compatta(buffer,lenNome);
+    nome=(stringa)malloc((lenNome+1)*sizeof (char));
+    strcpy(nome,buffer);
     clear_buffer();
 
     //nome
     printf("inserisci il tuo nome: ");
     fgets(buffer,sizeof(buffer),stdin);
 
+    //stringa nome allocata
     lenNome=strlen(buffer);
     compatta(buffer,lenNome);
     nome=(stringa)malloc((lenNome+1)*sizeof (char));
@@ -83,7 +86,8 @@ int main(){
     //mese
     printf("inserisci il tuo mese di nascita: ");
     fgets(buffer,sizeof(buffer),stdin);
-    
+
+    //stringa mese allocata
     lenMese=strlen(buffer);
     compatta(buffer,lenCogn);
     cognome=(stringa)malloc((lenMese+1)*sizeof (char));
@@ -100,25 +104,35 @@ int main(){
 
     //CCC
 
+    codiceFiscale=(stringa)malloc((lenCodice+1)*sizeof (char));
     //scorriamo il cognome
     for(int i=0;i<lenCogn;i++){
         c=tolower(cognome[i]);
         if(c!='a' || c!='e' || c!='i' || c!='o' || c!='u'){
-    
-            while(i<=3){
-                for(int a=0; a<lenCodice; a++){
-                    codiceFiscale[a]=c;
+            
+            //consonanti
+            if(cnt<3){
+                if(j<lenCodice){
+                    codiceFiscale[j]=c;
+                    cnt++;
+                    j++;
                 }
             }
         }
-    }
+        //vocali
+        if(cnt<3){
+            for(int a=cnt; a<lenCodice; a++){//no
+                    codiceFiscale[a]=c;
+                }
 
-    compatta(buffer,lenCodice);
-    codiceFiscale=(stringa)malloc((lenCodice+1)*sizeof (char));
-    strcpy(codiceFiscale,buffer);
-    clear_buffer();
+        }
+    }
+    
+    printf("ciaooooooooooooooooooooo %s",codiceFiscale);
 
     free(nome);
     free(cognome);
     free(mese);
+    free(codiceFiscale);
+    return 0;
 }
