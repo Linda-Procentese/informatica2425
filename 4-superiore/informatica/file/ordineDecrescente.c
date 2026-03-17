@@ -9,8 +9,24 @@
 
 void ordinaFile (char nomeFile[]){
     FILE *Fp;//putatoe che unta al file
+    int vett[100],i=0, n;
 
     Fp=fopen (nomeFile, "r");
+    if(Fp==NULL){
+        printf("ERRORE APERTURA FILE\n");
+        return 1;
+    }
+    //lettura dei numeri di file
+    while(fscanf(Fp,"%d",&vett[i])==1){
+        printf("elemento %d: %d \n",i+1,vett[i]);
+        i++;
+    }
+    fclose(Fp);
+    //ordiniamo i valori
+    n=i;
+    for(i=0;i<n;i++){
+        
+    }
 }
 
 int main(){
