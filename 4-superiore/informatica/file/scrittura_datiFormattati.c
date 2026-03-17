@@ -1,0 +1,16 @@
+//file formattato (se non è formattatoci si puo trovare lettere numeri ecc tutti insieme
+//scrittura di dati formattati(file ordinati %s %d %f)
+#include <stdio.h>
+
+int main(){
+    FILE *file=fopen("dati.txt","w");
+
+    if(file==NULL){
+        printf("errore apertura file \n");
+        return 1;
+    }
+    fprintf(file,"%s %d %.2f","luca",12,6.5);
+    
+    fclose(file);
+    return 0;
+}
