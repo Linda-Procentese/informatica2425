@@ -20,7 +20,7 @@ void ordinaFile (char nomeFile[]){
     while(fscanf(Fp,"%d ",&vett[n])==1){
         /*fscanf legge i dati e li mette in vett se restituisce 
         0 vuol dire che non ha letto il numero
-        LO SPAZIO DOPO %Dùd è NECESSARIO, LHO MESSO E HA FUNZIONATO TUTTO*/ 
+        LO SPAZIO DOPO %d è NECESSARIO, LHO MESSO E HA FUNZIONATO TUTTO*/ 
         printf("Elemento %d: %d \n",n+1,vett[n]);
         n++;
     }
