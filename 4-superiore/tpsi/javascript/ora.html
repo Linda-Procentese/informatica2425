@@ -1,0 +1,22 @@
+<!--pulsante che quando viene schiacciato visualizza l'ora attuale-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+		<script>
+			function mostraOra(){
+				var d = new Date();//(si puo scrivere var o let per dichiarare una variabile) Date()= è un oggetto della libreria (data), new= è un metodo (azione che si puo fare con l'oggetto date), la variabile d è un istanza di Date
+				var ora = d.toLocaleTimeString();<!--.toLocaleTimeString= è un metodo col quale fa visualizzare l'ora locale, che viene preso dalla variabile d e messo nella variabile ora-->
+				//alert(ora);ora decidiamo come far visualizzare l'ora(con un allert)
+				document.body.innerHTML += "<p>l'ora attuale è: </p>";//innerHTML=è un azione che permette di scrivere all'nterno del body
+				document.body.innerHTML += ora;//nel momento in cui clicco sul  pulsante stampa sotto l'ora attuale;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="button" onclick="mostraOra();" value="Che ora è?"></input><!--creiamo una funzione chiamata mostraOra/il pulsante si chiama "Che ora è?"-->
+		</form>
+	</body>
+</html>

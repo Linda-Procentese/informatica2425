@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<style>
+			.box{
+				width:50px;
+				height:50px;
+				background-color:lightblue;
+				position:relative;
+				border: 2px solid grey;
+				left:0;
+				transition: left 1s ease,
+							background-color 1s linear,
+							width 1s ease-out,
+							height 1s ease-out,
+							border-radius 1s ease-in;
+			}
+			.box:hover {
+				background-color: pink;
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+		<script>
+			let moved=false;
+			function moveBox(){
+				const box=document.getElementById("box");
+				
+				if(!moved){
+					box.style.left="200px";
+				}
+				else{
+					box.style.left="0px";
+				}
+				moved=!moved;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box" id="box"></div>
+		<button onclick="moveBox();">Muovi</button>
+	</body>
+</html>
+<!--if(!moved) se non è stato mosso l'oggetto...-->
+<!--box.style.left="200px";  aumenta la distanza dell'oggetto dal bordo sinistro per  spostarlo a destra-->

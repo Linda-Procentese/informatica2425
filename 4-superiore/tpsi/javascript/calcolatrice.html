@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calcolatrice</title>
+		<script>
+			let str="", str1="", op="";
+			
+			function tasto(v){
+				document.calc.display.value+=v;
+				str+=v;
+			}
+			function operat(p){
+				op =p;
+				document.calc.display.value="";
+				str1=eval(str);
+				str="";
+			}
+			function operaz(){
+				switch(op){
+					case "*":
+						document.calc.display.value = eval(str) * str1;
+						break;
+						
+					case "+":
+						document.calc.display.value = eval(str) + str1;
+						break;
+						
+					case "-":
+						document.calc.display.value = eval(str) - str1;
+						break;
+						
+					case "/":
+						document.calc.display.value = eval(str) / str1;
+						break;
+				}
+			}
+			function cancella(){
+				document.calc.display.value="";
+
+			}
+		</script>
+	</head>
+	<body>
+		<table border=3><!--tabella principale-->
+			<tr><!--definisce la riga-->
+				<td>
+					<form name="calc">
+						<br>CASIO<br>
+						<input type="text" name="display" value="" size="9"></input><br><br><!--display-->
+						<table border=2>
+							<tr>
+								<input type="button" value="(" onclick="operat(this.value);"></input>
+								<input type="button" value=")" onclick="operat(this.value);"></input>
+								<input type="button" value="C"  onclick="cancella();"></input>
+								<input type="button" value="/" onclick="operat(this.value);"></input><br>
+								
+							</tr>
+							<tr>
+								<input type="button" value="7" onclick="tasto(this.value);"></input>
+								<input type="button" value="8" onclick="tasto(this.value);"></input>
+								<input type="button" value="9" onclick="tasto(this.value);"></input>
+								<input type="button" value="*" onclick="operat(this.value);"></input><br>
+								<!--this.value= è il valore del tasto ed è il valore che passiamo
+								per variabile alla funzione tasto I VALORI ENGONO  LETTI COME STRINGE NON COME NUMERI-->
+							</tr>
+							<tr>
+								<input type="button" value="4" onclick="tasto(this.value);"></input>
+								<input type="button" value="5" onclick="tasto(this.value);"></input>
+								<input type="button" value="6" onclick="tasto(this.value);"></input>
+								<input type="button" value="-" onclick="operat(this.value);"></input><br>
+							</tr>
+							<tr>
+								<input type="button" value="1" onclick="tasto(this.value);"></input>
+								<input type="button" value="2" onclick="tasto(this.value);"></input>
+								<input type="button" value="3" onclick="tasto(this.value);"></input>
+								<input type="button" value="+" onclick="operat(this.value);"></input><br>
+							</tr>
+							<tr>
+								<input type="button" value="0" onclick="tasto(this.value);"></input>
+								<input type="button" value="." onclick="tasto(this.value);"></input>
+								<input type="button" value="=" onclick="operaz();"></input><br>
+								
+							</tr>
+							
+						</table>
+					</form>
+				</td><!--definisce le cele nella riga-->
+			</tr>
+		</table>
+	</body>
+</html>
+
+

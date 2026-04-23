@@ -1,0 +1,12 @@
+<!--elenco funzioni javascript-->
+<script>
+	function scrivi(){//copia il messaggio, che l'utente ha scritto nella text area, in una div
+		document.getElementById("output").innerHTML=messaggio.value;//messaggio=nome textarea dove l'utente scrive il testo da inserire
+	}
+	function cambiaColore(){//cambia il colore del testo scritto dentro una div 
+		var msg=document.getElementById("messaggio").value;//messaggio=nome textarea dove l'utente scrive il testo da inserire
+		var color=document.getElementById("colore").value;//colore=nome textarea dove l'utente scrive il colore che vuole
+		document.getElementById("output").innerHTML=msg;//innerHTML= funscione che scrive dentro alla variabile msg in questo caso
+		document.getElementById("output").style.color=color;//ora questa riga di codice colora il testo
+	}//output=nome div che fa funzionare tutto alla fine del codice
+</script>
