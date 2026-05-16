@@ -9,10 +9,10 @@
 
 //=== Salva tutti i libri del catalogo
 void salvaLibri(CatalogoLibri *catalogo) {                         
-    FILE *fp = fopen(FILE_LIBRI, "w");                            // Apre il file dei libri in modalità 
+    FILE *fp = fopen("../data/libri.csv", "w");                            // Apre il file dei libri in modalità 
     
     if (!fp) {                                                    // Se il file non può essere aperto, stampa un errore ed esce dalla funzione
-        printf("Errore: impossibile aprire %s per la scrittura.\n", FILE_LIBRI);
+        printf("Errore: impossibile aprire %s per la scrittura.\n", "../data/libri.csv");
         return;
     }
 
@@ -33,7 +33,7 @@ void salvaLibri(CatalogoLibri *catalogo) {
 
 //=== Carica i libri dal file CSV e li inserisce nella struct catalogo
 void caricaLibri(CatalogoLibri *catalogo) {
-    FILE *fp = fopen(FILE_LIBRI, "r");                           // Apre il file dei libri in modalità lettura
+    FILE *fp = fopen("../data/libri.csv", "r");                           // Apre il file dei libri in modalità lettura
         
     if (!fp) return;                  
 
@@ -82,10 +82,10 @@ void caricaLibri(CatalogoLibri *catalogo) {
 
 // Salva i dati anagrafici di tutti gli utenti nel file CSV
 void salvaUtenti(ElencoUtenti *elenco) {
-    FILE *fp = fopen(FILE_UTENTI, "w");
+    FILE *fp = fopen("../data/utenti.csv", "w");
 
     if (!fp) {
-        printf("Errore: impossibile aprire %s per la scrittura.\n", FILE_UTENTI);
+        printf("Errore: impossibile aprire %s per la scrittura.\n", "../data/utenti.csv");
         return;
     }
 
@@ -101,7 +101,7 @@ void salvaUtenti(ElencoUtenti *elenco) {
 // Carica l'elenco degli utenti dal file CSV
 void caricaUtenti(ElencoUtenti *elenco) {
 
-    FILE *fp = fopen(FILE_UTENTI, "r");
+    FILE *fp = fopen("../data/utenti.csv", "r");
     if (!fp) return;
 
     char linea[512];
@@ -144,10 +144,10 @@ void caricaUtenti(ElencoUtenti *elenco) {
 
 // Esporta tutti i prestiti attivi e passati nel file CSV
 void salvaPrestiti(ElencoUtenti *elenco) {
-    FILE *fp = fopen(FILE_PRESTITI, "w");
+    FILE *fp = fopen("../data/prestiti.csv", "w");
 
     if (!fp) {
-        printf("Errore: impossibile aprire %s per la scrittura.\n", FILE_PRESTITI);
+        printf("Errore: impossibile aprire %s per la scrittura.\n", "../data/prestiti.csv");
         return;
     }
 
@@ -172,7 +172,7 @@ void salvaPrestiti(ElencoUtenti *elenco) {
 
 //=== Carica i prestiti dal CSV e li associa agli utenti esistenti
 void caricaPrestiti(ElencoUtenti *elenco) {
-    FILE *fp = fopen(FILE_PRESTITI, "r");
+    FILE *fp = fopen("../data/prestiti.csv", "r");
 
     if (!fp) return;
 

@@ -11,3 +11,4 @@ void utentePiuPrestiti(ElencoUtenti *elenco);
 void storicoPrestiti(ElencoUtenti *elenco);
 void tassoRestituzione(ElencoUtenti *elenco);
 void generiPiuRichiesti(CatalogoLibri *catalogo, ElencoUtenti *elenco);
+void stampaBarra(int valore, int scala);

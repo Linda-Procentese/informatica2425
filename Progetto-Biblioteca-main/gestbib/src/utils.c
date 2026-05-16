@@ -121,7 +121,8 @@ void libroPiuPrestato(CatalogoLibri *catalogo, ElencoUtenti *elenco) {
         printf("\n--- Libro piu' prestato ---\n");
         printf("Titolo : %s\n", catalogo->libri[idx].titolo);
         printf("Autore : %s\n", catalogo->libri[idx].autore);
-        printf("Prestiti totali: %d\n", max);
+        printf("Prestiti: ");
+        stampaBarra(max, 1); // 1 '|' per ogni prestito
     }
 }
 
@@ -217,8 +218,10 @@ void tassoRestituzione(ElencoUtenti *elenco) {
 
     printf("\n--- Tasso di Restituzione ---\n");
     printf("Prestiti totali : %d\n", totali);
-    printf("Restituiti : %d\n", restituiti);
-    printf("Non restituiti : %d\n", totali - restituiti); 
+    printf("Restituiti      : ");
+    stampaBarra(restituiti, 1); // 1 '|' per ogni prestito restituito
+    printf("Non restituiti  : ");
+    stampaBarra(totali - restituiti, 1); // 1 '|' per ogni prestito non restituito
     printf("Tasso : %.1f%%\n", tasso); 
 }
 
@@ -244,6 +247,7 @@ void generiPiuRichiesti(CatalogoLibri *catalogo, ElencoUtenti *elenco) {
             }
         }
 
-        printf("%-20s : %d prestiti\n", catalogo->libri[j].genere, contatore);
+        printf("%-20s ", catalogo->libri[j].genere);
+        stampaBarra(contatore, 1); // 1 '|' per ogni prestito del genere
     }
 }
