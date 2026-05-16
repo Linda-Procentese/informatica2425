@@ -200,11 +200,10 @@ int main(){
 
         case 0:
             /* Salvataggio finale di sicurezza all'uscita */
-            printf("\nSalvataggio dati in corso...\n");
             salvaLibri(&catalogo);
             salvaUtenti(&elenco);
             salvaPrestiti(&elenco);
-            printf("Dati salvati. Arrivederci!\n");
+            printf("\nTutti i dati sono stati salvati nei file.\n");
             break;
 
         default:
