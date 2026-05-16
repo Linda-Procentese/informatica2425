@@ -14,7 +14,7 @@
 void salvaLibri(CatalogoLibri *catalogo);
 void salvaPrestiti(ElencoUtenti *elenco);
 void salvaUtenti(ElencoUtenti *elenco);
-
+void salvaStorico(ElencoUtenti *elenco);
 
 // Caricamento
 void caricaLibri(CatalogoLibri *catalogo);

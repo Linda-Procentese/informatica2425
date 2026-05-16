@@ -137,6 +137,7 @@ int main(){
                         restituzioneLibro(&catalogo, &elenco);
                         salvaPrestiti(&elenco); /* Salva subito dopo ogni modifica */
                         salvaLibri(&catalogo);  /* Salva anche i libri perché le copie disponibili cambiano */
+                        salvaStorico(&elenco);
                         break;
 
                     case 3:

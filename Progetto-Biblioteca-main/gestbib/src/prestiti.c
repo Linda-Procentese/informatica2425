@@ -136,8 +136,9 @@ void restituzioneLibro(CatalogoLibri *catalogo, ElencoUtenti *elenco){
         if(!tmp->restituito){                          // stampa solo i prestiti non ancora restituiti
             printf("%d - %s\n", tmp->id_libro, tmp->titolo_libro);
             ha_prestiti = 1;                           
-        tmp=tmp->next;                                 // passa al nodo successivo
+                       
         }
+        tmp=tmp->next;                                 // passa al nodo successivo
     }
 
     if(!ha_prestiti){                                  // se nessun prestito attivo trovato

@@ -224,3 +224,29 @@ void caricaPrestiti(ElencoUtenti *elenco) {
     }
     fclose(fp);
 }
+//=== Salva tutti i prestiti gai restituiti nello storico
+void salvaStorico(ElencoUtenti *elenco) {
+    FILE *fp = fopen("../data/storico.csv", "w");
+    if (!fp) {
+        printf("Errore: impossibile aprire %s per la scrittura.\n","../data/storico.csv");
+        return;
+    }
+
+    for (int i = 0; i < elenco->num; i++) {                          // scorre tutti gli utenti
+        Utente *u = &elenco->utenti[i];
+        for (NodoPrestito *nodo = u->prestiti; nodo != NULL; nodo = nodo->next) { // scorre i prestiti
+            if (nodo->restituito) {                                   // salva solo i prestiti restituiti
+                fprintf(fp, "%d,%s,%s,%d,%s,%ld,%ld\n",
+                        u->id,
+                        u->nome,
+                        u->cognome,
+                        nodo->id_libro,
+                        nodo->titolo_libro,
+                        (long)nodo->data_prestito,
+                        (long)nodo->data_scadenza);
+            }
+        }
+    }
+
+    fclose(fp);
+}
